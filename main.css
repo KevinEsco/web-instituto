@@ -98,7 +98,7 @@ article{
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1200px) {
-  .nav a:not(:first-child) {display: none;}
+  .nav a {display: none;}
   .nav a.icon {
     float: right;
     display: block;
@@ -124,3 +124,4 @@ article{
   margin-left: 30px;
 
 }
+ .a_header{float: right;}

@@ -16,14 +16,15 @@
 
 <a class="brand" id="brand" href="">Viajes example</a>
         <div class="nav" id="nav-id">
-            <div class="a_header">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i id="hamburguer" class="fa fa-bars"></i>
+          </a>
+            <div class="a_header" id="a_header">
                 <a class="nav-tag" href="">Inicio</a>
                 <a class="nav-tag" href="">Acerca de nosotros</a>
                 <a class="nav-tag" href="">Destinos</a>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
+
 
 
         </div>
@@ -70,12 +71,15 @@
   var x = document.getElementById("nav-id");
   if (x.className === "nav") {
       x.className += " responsive";
+      document.getElementById('a_header').style.float= 'none';
       document.getElementById('brand').style.display = 'none';
-      document.getElementById("a_header").style.float= 'left';
+      document.getElementById('nav-id').style.float= 'none';
   } else {
       x.className = "nav";
       document.getElementById('brand').style.display = 'block';
-document.getElementById("a_header").style.float= 'right';
+      document.getElementById('hamburguer').style.float= 'right';
+document.getElementById('nav-id').style.float= 'right';
+
   }
 }
   </script>
