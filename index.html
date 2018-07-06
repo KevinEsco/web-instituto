@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,40 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Viajes example</h1> 
+
+<a class="brand" id="brand" href="">Viajes example</a>
+        <div class="nav" id="nav-id">
+            <div class="a_header">
+                <a class="nav-tag" href="">Inicio</a>
+                <a class="nav-tag" href="">Acerca de nosotros</a>
+                <a class="nav-tag" href="">Destinos</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+
+
+        </div>
     </header>
-    <nav>
-        <a class="nav-tag" href="">Inicio</a>
-        <a class="nav-tag" href="">Acerca de nosotros</a>
-        <a class="nav-tag" href="">Destinos</a>
-        
-    </nav>
+
     <section>
         <div class="contenido">
             <article>
                 <p class="article">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis nam dignissimos laborum, perferendis inventore non commodi ipsam aliquid. Autem voluptates dolorem earum dolor nisi quae? Doloribus sed doloremque quas aut!</p>
-                <img class="imagen_contenido" src="londres.jpg" alt="Londres"> 
+                <img class="imagen_contenido" src="londres.jpg" alt="Londres">
             </article>
             <article>
                 <p class="article">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia architecto adipisci animi esse numquam deserunt, ratione quos eius ut blanditiis molestiae deleniti eveniet velit placeat reprehenderit aut consectetur ex distinctio.</p>
-                <img class="imagen_contenido" src="paris.jpg" alt="Paris"> 
+                <img class="imagen_contenido" src="paris.jpg" alt="Paris">
             </article>
         </div>
     </section>
     <aside id="barra-lateral">
         <div class ='barra-lateral_seccion1'>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam accusantium dolores laudantium vitae veniam neque. Quidem, hic quae accusamus ad, voluptatibus omnis magnam fugit iure praesentium et nostrum dolorum possimus.</p>
-            
+
         </div>
         <div class="barra-lateral_seccion2">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam accusantium dolores laudantium vitae veniam neque. Quidem, hic quae accusamus ad, voluptatibus omnis magnam fugit iure praesentium et nostrum dolorum possimus.</p>            
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam accusantium dolores laudantium vitae veniam neque. Quidem, hic quae accusamus ad, voluptatibus omnis magnam fugit iure praesentium et nostrum dolorum possimus.</p>
         </div>
     </aside>
-    
+
 </body>
 <footer>
     <div class="Contacto">
@@ -49,10 +60,130 @@
         <h4> Email</h1>
             <input type="text" name="" id="input_contacto" required>
         <h4> Mensaje</h1>
-            <input type="text" name="" id="input_contacto" required> <br>  
-            <button onclick=alert("enviado");>Enviar</button>     
-        </form>        
-    </div>
+            <input type="text" name="" id="input_contacto" required> <br>
+            <button onclick=alert("enviado");>Enviar</button>
+        </form>
+      </div>
+  <script type="text/javascript">
+  function myFunction() {
 
+  var x = document.getElementById("nav-id");
+  if (x.className === "nav") {
+      x.className += " responsive";
+      document.getElementById('brand').style.display = 'none';
+      document.getElementById("a_header").style.float= 'left';
+  } else {
+      x.className = "nav";
+      document.getElementById('brand').style.display = 'block';
+document.getElementById("a_header").style.float= 'right';
+  }
+}
+  </script>
+    <!-- <HEAD>
+    <TITLE>Verificacion de formulario</TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+    ISFT N° 130 Ejemplos básicos de JAVASCRIPT EDI III
+    function runTest(form, button) {
+    Ret = false;
+    if (button.name == "1") Ret = testBox1(form);
+    if (button.name == "2") Ret = testBox2(form);
+    if (button.name == "3") Ret = testBox3(form);
+    if (button.name == "4") Ret = testBox4(form);
+    if (Ret)
+    alert ("Entrada correcta!");
+    }
+    function testBox1(form) {
+    Ctrl = form.inputbox1;
+    if (Ctrl.value == "" || Ctrl.value.indexOf ('@', 0) == -1) {
+    validatePrompt (Ctrl, "Entrar un E-mail valido")
+    return (false);
+    } else
+    return (true);
+    }
+    function testBox2(form) {
+    Ctrl = form.inputbox2;
+    if (Ctrl.value.length != 5) {
+    validatePrompt (Ctrl, "Escribir CINCO caracteres")
+    return (false);
+    } else
+    return (true);
+    }
+    function testBox3(form) {
+    Ctrl = form.inputbox3;
+    if (Ctrl.value.length < 3) {
+    validatePrompt (Ctrl, "Entrar 3 o mas caracteres")
+    return (false);
+    } else
+    return (true);
+    }
+    function testBox4(form) {
+    Ctrl = form.inputbox4;
+    ISFT N° 130 Ejemplos básicos de JAVASCRIPT EDI III
+    if (Ctrl.value == "") {
+    validatePrompt (Ctrl, "Este campo no puede estar vacio")
+    return (false);
+    } else
+    return (true);
+    }
+    function runSubmit (form, button) {
+    if (!testBox1(form)) return;
+    if (!testBox2(form)) return;
+    if (!testBox3(form)) return;
+    if (!testBox4(form)) return;
+    alert ("Todas la entradas OK!");
+    //document.test.submit(); // un-comment to submit form
+    return;
+    }
+    function validatePrompt (Ctrl, PromptStr) {
+    alert (PromptStr)
+    Ctrl.focus();
+    return;
+    }
+    function loadDoc() {
+    // initial focus; use if needed
+    //document.test.inputbox1.focus ();
+    return;
+    }
+    //
+    </SCRIPT>
+    </HEAD>
+    <BODY bgcolor="00FFFF" onLoad="loadDoc()">
+    <CENTER>
+    <H3>Verificaci&oacute;n de entrada de datos en un formulario con JavaScript</H3>
+    </CENTER>
+    ISFT N° 130 Ejemplos básicos de JAVASCRIPT EDI III
+    <FORM NAME="test" ACTION=" " METHOD=GET>
+    <table border>
+    <tr>
+    <td>Entrar tu E-mail (p.ej.: pepe@uv.es): </td>
+    <td><INPUT TYPE="text" NAME="inputbox1"> </td>
+    <td><INPUT TYPE="button" NAME="1" VALUE="Test" onClick="runTest(this.form,
+    this)"></td>
+    </tr>
+    <tr>
+    <td>Entrar 5 caracteres s&oacute;lo:</td>
+    <td><INPUT TYPE="text" NAME="inputbox2"></td>
+    <td><INPUT TYPE="button" NAME="2" VALUE="Test"
+    onClick="runTest(this.form, this)"></td>
+    </tr>
+    <tr>
+    <td>Entrar 3 o m&aacute;s caracteres: </td>
+    <td><INPUT TYPE="text" NAME="inputbox3"></td>
+    <td><INPUT TYPE="button" NAME="3" VALUE="Test"
+    onClick="runTest(this.form, this)"></td>
+    </tr>
+    <tr>
+    <td>Entrar cualquier cosa: </td>
+    <td><INPUT TYPE="text" NAME="inputbox4"></td>
+    <td><INPUT TYPE="button" NAME="4" VALUE="Test"
+    onClick="runTest(this.form, this)"></td>
+    </tr>
+    <tr>
+    <td align=center><input type="reset" name="reset" value="Inicializar"></td>
+    <td align=center><INPUT TYPE="button" NAME="Submit" VALUE="Test final"
+    onClick="runSubmit(this.form, this)"></td>
+    </FORM>
+    </table> -->
 </footer>
 </html>
