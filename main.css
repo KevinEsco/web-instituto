@@ -1,0 +1,72 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(41, 168, 41, 0.452)
+}
+header{
+    display: block;
+   text-align: center;
+   font-size: 2rem;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+nav{
+    display: block;
+
+    text-align: right;
+    padding: 30px 40px 100px 0px;
+}
+.nav-tag{
+    padding: 20px 50px 20px 50px;
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    max-width: 10%;
+
+}
+.nav-tag:hover{
+    color: rgb(253, 0, 84);
+}
+
+#barra-lateral{
+    float: right;
+    display: block;
+    max-width: 20%;
+    display: block;
+    margin-right: 50px;
+    
+}
+.barra-lateral_seccion1, .barra-lateral_seccion2{
+    padding: 20px;
+}
+.Contacto{
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+.contenido{
+  max-width: 60%;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  margin-left: 100px; 
+}
+div{
+    border: 1px solid white;
+}
+.imagen_contenido{
+    max-width: 60%;
+    text-align: center;
+    padding: 20px 80px 0px 80px;
+    
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+article{
+    padding: 40px;
+}
